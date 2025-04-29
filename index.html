@@ -1,1 +1,157 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All About Maggie Rickert</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #e97979;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #ff2f2f;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      background-color: #3d5a73;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    .profile {
+      max-width: 150px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .contact {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .contact a {
+      display: inline-block;
+      background-color: #e97979;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact a:hover {
+      background-color: #3d5a73;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Maggie Rickert</h1>
+    <p>Student-Athlete at Gonzaga University | Volleyball Player | Accounting Major</p>
+  </header>
+
+  <nav>
+    <a onclick="showSection('home')">Home</a>
+    <a onclick="showSection('journey')">My Journey</a>
+    <a onclick="showSection('photos')">Photos</a>
+  </nav>
+
+  <!-- Home Section -->
+  <div id="home" class="container section active">
+
+
+    <h2>About Me</h2>
+    <p>Hi! My name is Maggie Rickert. I was born and raised in Ann Arbor, Michigan, but I now live in Nashville, Tennessee. I am a student-athlete on the volleyball team here at Gonzaga. I am a sophmore, almost junior here and I am studying accounting. I have two older silbings, my sister, Sam, is 24 and my brother, Dan, is 23. My mom works in adversitsing sales and my dad is an automotive engineer. I also have the cutest little english bulldog named Bosa, she is definetly my parents favorite child. When I am not playing volleyball I enjoy working out, coloring, puzzles, board games, and reading. </p>
+    <h2>Contact</h2>
+    <div class="contact">
+      <a href="mailto:mrickert@zagmail.gonzaga.edu">Click Here for Email</a>
+    </div>
+  </div>
+
+  <!-- Journey Section -->
+  <div id="journey" class="container section">
+    <h2>My Journey</h2>
+    <p>I grew up in Nashville, Tennessee, and started playing volleyball around the age of 8. My older sister, Sam, played volleyball so I was constantly exposed to it.</p>
+    <p>During high school, I played travel volleyball and that is how I got in touch with the Gonzaga volleyball coaches. They reached out to me and I came on a vist during my junior year of high school. It was my first time on the West Coast and I immediately fell in love with the city, the campus, and the people. I commited to Gonzaga shortly after my visit and started planning my move across the country.  </p>
+    <p>Being a student-athlete at the college level requires an extreme amount of commitment. It requires a significant amount of dedication and time management. This expeirence, that I am blessed enough to be a part of, has helped shape who I am today. </p>
+  </div>
+
+  <!-- Photos Section -->
+  <div id="photos" class="container section">
+    <h2>Photos</h2>
+    <p>Check out some of my favorite moments:</p>
+    <p>This first photo is from my time here at Gonzaga.</p>
+    <p>Then, the second photo is from me in high school back in Tennessee</p>
+    <img src="https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gozags.com/images/2023/9/30/DSC09950.jpg" alt="Volleyball Game" style="max-width:100%; margin-bottom:20px;">
+    <img src="https://bloximages.newyork1.vip.townnews.com/williamsonherald.com/content/tncms/assets/v3/editorial/f/04/f04490d4-3415-11ed-b0ea-affbf36de3fc/6321a962cc909.image.jpg?resize=400%2C261" alt="Beach Day" style="max-width:100%; margin: bottom 20px;">
+  </div>
+
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(sectionId).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
